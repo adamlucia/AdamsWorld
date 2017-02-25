@@ -15,5 +15,13 @@
   "bugs": {
     "url": "ssh://git@github.com:adamlucia/mySite/issues"
   },
-  "homepage": "ssh://git@github.com:adamlucia/mySite#readme"
+  "homepage": "ssh://git@github.com:adamlucia/mySite#readme",
+  "devDependencies": {
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^0.4.2",
+    "angularjs": "0.0.1",
+    "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1",
+    "nodemon": "^1.11.0"
+  }
 }
