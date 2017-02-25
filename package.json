@@ -1,0 +1,19 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "Personal site",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:adamlucia/mySite.git"
+  },
+  "author": "Adam Lucia",
+  "license": "ISC",
+  "bugs": {
+    "url": "ssh://git@github.com:adamlucia/mySite/issues"
+  },
+  "homepage": "ssh://git@github.com:adamlucia/mySite#readme"
+}
