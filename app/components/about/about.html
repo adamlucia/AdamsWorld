@@ -1,0 +1,33 @@
+<section id="about">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Words</h3>
+            <i>Creative, Unique, Team Oriented</i>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div tyle="height: 305px">
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in $ctrl.slides track by slide.id" index="slide.id">
+                        <img class="carousel-image" ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                            <p>{{slide.text[$index]}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Experience</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Education</h3>
+        </div>
+    </div>
+</section>

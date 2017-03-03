@@ -1,0 +1,22 @@
+.container .center_horizontal {
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%; }
+
+.center_vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+#intro_container {
+  display: block;
+  height: 600px; }
+  #intro_container #intro {
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0); }
+    #intro_container #intro #name {
+      font-size: 100; }
+
+#about .carousel-image {
+  width: 800px;
+  height: 400px; }
