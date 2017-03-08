@@ -1,3 +1,14 @@
+$main: rgba(58, 165, 199, 1);
+
+
+//mix ins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 .container {
 
     .center_horizontal {
@@ -16,11 +27,22 @@
   justify-content: center;
 }
 
+.navbar {
+    margin-bottom: 0px;
+    background-color: $main;
+    background-image: none;
+    border: none;
+    @include border-radius('none');
+    box-shadow: none;
+}
+
 #intro_container {
     display: block;
     height: 600px;
+    height: 100vh;
     #intro {
-        height: 600px;
+        height: 100%;
+
         background-color: rgba(255, 255, 255, 0);
 
         #name {
