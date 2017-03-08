@@ -29,6 +29,7 @@ angular.module('mySite').directive('chameleon', ['$window', function ($window) {
 
                if (this.pageYOffset >= parseInt(scope.offset)) {
                    chameleonElement.css('background-color', `rgba(${scope.color}, ${element[0].offsetTop/this.pageYOffset})`);
+                   chameleonElement.css('background-color', `rgba(${scope.color}, ${1 - this.pageYOffset / (element[0].offsetHeight/2)})`);
                    //element.css('opacity', element[0].offsetTop/this.pageYOffset)
                } else {
 
