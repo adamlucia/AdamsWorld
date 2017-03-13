@@ -9,6 +9,14 @@ $main: rgba(58, 165, 199, 1);
           border-radius: $radius;
 }
 
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
 .container {
 
     .center_horizontal {
@@ -32,17 +40,18 @@ $main: rgba(58, 165, 199, 1);
     background-color: $main;
     background-image: none;
     border: none;
-    @include border-radius('none');
+    @include border-radius(0);
     box-shadow: none;
 }
 
 #intro_container {
     display: block;
-    height: 600px;
+    min-height: 300px;
     height: 100vh;
+    margin-bottom: 2em;
+
     #intro {
         height: 100%;
-
         background-color: rgba(255, 255, 255, 0);
 
         #name {
@@ -52,9 +61,37 @@ $main: rgba(58, 165, 199, 1);
 }
 
 #about {
-    .carousel-image {
-        width: 800px;
-        height: 400px;
+
+    .section-header{
+        font-weight: 500;
+        font-size: 30px;
+        margin: 50px 0px 20px -20px;
+
+        display: inline-block;
+        padding: 0px 30px 0px 5px;
+        background-image: linear-gradient(to left,
+                                     transparent,
+                                     transparent 50%,
+                                     #00c6ff 50%,
+                                     #00c6ff);
+        background-position: 100% 0;
+        background-size: 260% 100%;
+        @include transition(all, .5s, ease-in);
+
+        &:hover {
+            background-position: 0 0;
+        }
     }
 
+    #education {
+        h4 {
+
+        }
+        .school {
+
+        }
+        .degree {
+
+        }
+    }
 }
