@@ -7,6 +7,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./app/css'));
 });
 
+//create css file if there is not one already
 gulp.task('sass:watch', function () {
     gulp.watch('./app/css/**/*.scss', ['sass']);
 });
