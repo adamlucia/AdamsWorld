@@ -20,12 +20,17 @@ angular.module('mySite').directive('chameleon', ['$window', function ($window) {
 
             //console.log('chameleonElement', chameleonElement);
             element.after(chameleonElement);
-            element.css('z-index', 100)
+            element.css('z-index', 100);
             var elementsTopOffset = element.topOffset;
+            angular.element($window).bind("resize", function() {
+                console.log('this.innerHeight', this.innerHeight);
+                chameleonElement.css('height', this.innerHeight+'px');
 
+                element.css('height', this.innerHeight+'px');
+                chameleonElement.css('top', '-'+element[0].offsetHeight+'px');
+            });
             angular.element($window).bind("scroll", function() {
-                // console.log('this.pageYOffset', this.pageYOffset);
-                console.log('element[0].offsetTop', element[0].offsetTop/this.pageYOffset);
+
 
                if (this.pageYOffset >= parseInt(scope.offset)) {
                    chameleonElement.css('background-color', `rgba(${scope.color}, ${element[0].offsetTop/this.pageYOffset})`);
