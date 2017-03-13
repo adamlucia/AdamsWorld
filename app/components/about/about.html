@@ -1,20 +1,56 @@
 <section id="about">
     <div class="row">
         <div class="col-md-12">
-            <h3>Words</h3>
-            <i>Creative, Unique, Team Oriented</i>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div tyle="height: 305px">
-                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                    <div uib-slide ng-repeat="slide in $ctrl.slides track by slide.id" index="slide.id">
-                        <img class="carousel-image" ng-src="{{slide.image}}" style="margin:auto;">
-                        <div class="carousel-caption">
-                            <h4>Slide {{slide.id}}</h4>
-                            <p>{{slide.text[$index]}}</p>
-                        </div>
+            <section id="experience" class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div slide-highlight class="section-header">Experience</div>
+                        <h4>Community Elf</h4>
+                        <p>
+                            (early) Tasked with front-end maintenance and new features to Rent Jungle; A housing search engine that provides tools for buyers and sellers to find, sell, and communicate with ease while providing a platform for third party advertisements.
+                        </p>
+                        <p>
+                            (late) Part of a small team that created a stand alone productivity tool built for a large team of marketers and the public. Originally a full stack developer, my duties shifted to working hand-in-hand with a UX designer and the lead marketer to continue advancing user experience on the front-end. Other responsibilities included new employee training, assisting in product design, and testing.
+                            Assisted in porting the MyCommunityElf productivity tool prototype from CakePHP to AngularJS/Python while rebranding to UpContent and pivoting strategy to make better use of the products strengths.
+                            Developed and launched UpContent stream extension inside of HootSuite, successfully creating a B2B relationship and establishing the product as a technology leader inside of HootSuite.
+                            Designed and created visualizations to provide keyword recommendations using D3.js and an external keyword categorization service to help users broaden and hone their topics.
+                            Expanded upon and deployed visualizations of a “topics” landscape using the D3.js library and complex data structures to help users identify industry thought leaders.
+                            Managed adoption of front-end testing infrastructure utilizing Karma, PhantomJS, and the Jasmine testing framework.
+                            Documented RESTful API using the Swagger documentation framework in preparation for external access to the API.
+                            Part of a Technology Committee tasked with designing/installing network infrastructure/technology during office construction.
+                            Implemented a custom gallery to showcase user generated topics, built utilizing the in-house API; development of the gallery led to other revenue generating opportunities on existing client websites.
+                            Utilized Analytics.js to combine Google, Intercom, and an in-house analytics system to track user actions providing insight into user trends, roadblocks, browser statistics, and general site performance.
+                            Provided new developers with training and oversight.
+                        </p>
+
+                        <h4>US Steel</h4>
+                        <p>
+                            Part of a large team, supplemented with contractors, responsible for managing the US Steel payroll system.
+                            Updated mainframe logic using COBOL, FORTRAN, and NATURAL to meet the ever-changing requirements of US tax laws and The Department of Labor.
+                            Performed updates to existing reports used by the US Steel.
+                            Performed data quality analysis during the upgrade from a mainframe environment to Oracle RDBMS.
+                            Provided training to existing US Steel employees unfamiliar with HTML/CSS and SQL.
+                        </p>
+
+                        <h4>California University</h4>
+                        <p>
+                            Provided consultation, design, and maintenance for clients and their websites which include California University and student organized clubs. Part of the MACLAB team that provided technical support for students and staff using technology in the lab.
+                            Designed and produced a PHP web app that utilizes an interactive schedule and the Google Maps API. This provided a mobile resource for students and parents during the campus' Family Day events.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div slide-highlight class="section-header">Performance Coaching</div>
+                        <ul>
+                            <li>Identify pain points to decrease employee-employer tension</li>
+                            <li>Increase performance</li>
+                            <li>Minimise workplace stress</li>
+                            <li>Retain employee talent</li>
+                            <li>Provide guidiance on day-to-day social interactions</li>
+                            <li>Stratigize employee advancement</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -22,12 +58,27 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h3>Experience</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Education</h3>
+            <section id="education" class="container">
+                <div slide-highlight class="section-header">Education</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="school">
+                            California University Of Pennsylvania
+                        </div>
+                        <div class="degree">
+                            Computer Information Systems
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="school">
+                            Westmoreland County Community College
+                        </div>
+                        <div class="degree">
+                            Programming for the Enterprise
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </section>
