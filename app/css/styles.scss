@@ -1,5 +1,14 @@
 $main: rgba(58, 165, 199, 1);
 
+@font-face {
+  font-family: 'freedom';
+  src: url('../fonts/hxdes_freedom/FREEDOM.ttf');
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
 
 //mix ins
 @mixin border-radius($radius) {
@@ -23,13 +32,12 @@ $main: rgba(58, 165, 199, 1);
         margin-right: auto;
         margin-left: auto;
         // should probably be something else
-        width: 50%;
+        width: 100%;
     }
 
 }
 
 .center_vertical {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,10 +60,16 @@ $main: rgba(58, 165, 199, 1);
 
     #intro {
         height: 100%;
-        background-color: rgba(255, 255, 255, 0);
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%) ,url("../images/mySiteBG.png");
+        background-repeat: no-repeat;
+        background-size: cover;
 
         #name {
-            font-size: 100;
+            font-size: 140;
+        }
+
+        #tagline {
+            font-family: 'freedom';
         }
     }
 }
