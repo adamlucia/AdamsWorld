@@ -5,11 +5,6 @@ $main: rgba(58, 165, 199, 1);
   src: url('../fonts/hxdes_freedom/FREEDOM.ttf');
 }
 
-body {
-    font-family: sans-serif;
-    overflow-x: hidden;
-}
-
 //mix ins
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -26,6 +21,21 @@ body {
 	transition: $transition-property $transition-time $method;
 }
 
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 25px;
+}
+
+ul {
+    li {
+        font-size: 25px;
+    }
+}
+
 .container {
 
     .center_horizontal {
@@ -38,9 +48,9 @@ body {
 }
 
 .center_vertical {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section-header{
@@ -48,20 +58,18 @@ body {
     font-size: 30px;
     margin-top: 50px;
     margin-bottom: 20px;
+    font-family: 'freedom';
 
     h2 {
-        margin: 0px 0px 0px -20px;
-        display: inline-block;
+
         padding: 0px 30px 0px 5px;
-        background-image: linear-gradient(to left,
-                                     transparent,
-                                     transparent 50%,
-                                     #00c6ff 50%,
-                                     #00c6ff);
-        background-position: 100% 0;
-        background-size: 260% 100%;
-        @include transition(all, .5s, ease-in);
+        font-style: italic;
+
+        &.shortenWidth {
+            max-width: 50%;
+        }
     }
+
 
     &.center {
         text-align: center;
@@ -97,6 +105,7 @@ body {
 
         #name {
             font-size: 140;
+            font-weight: 100;
         }
 
         #tagline {
@@ -108,20 +117,32 @@ body {
 
 #about {
 
+    #experience, #education {
+        margin-top: 10em;
+    }
+
     #education {
         h4 {
 
         }
         .school {
-
+            font-size: 25px;
         }
         .degree {
-
+            font-size: 20px;
         }
     }
 }
 
-form {
-    width: 50%;
-    max-width: 400px;
+#contact {
+    margin-top: 10em;
+
+    form {
+        width: 50%;
+        max-width: 400px;
+    }
+}
+
+#footer {
+    height: 4em;
 }
