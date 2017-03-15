@@ -13,7 +13,7 @@ angular.module('mySite', ['ui.bootstrap', 'ui.router', 'ngAnimate'])
         templateUrl:'app/templates/main.html',
     })
     .state('index.home', {
-        url: '/home',
+        url: '/',
         params: {},
         controller: '',
         resolve: {},
