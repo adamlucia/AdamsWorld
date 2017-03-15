@@ -43,6 +43,37 @@ body {
   justify-content: center;
 }
 
+.section-header{
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    h2 {
+        margin: 0px 0px 0px -20px;
+        display: inline-block;
+        padding: 0px 30px 0px 5px;
+        background-image: linear-gradient(to left,
+                                     transparent,
+                                     transparent 50%,
+                                     #00c6ff 50%,
+                                     #00c6ff);
+        background-position: 100% 0;
+        background-size: 260% 100%;
+        @include transition(all, .5s, ease-in);
+    }
+
+    &.center {
+        text-align: center;
+
+        h2 {
+            margin: 0px;
+            background-image: none;
+        }
+    }
+}
+
+
 .navbar {
     margin-bottom: 0px;
     background-color: $main;
@@ -77,28 +108,6 @@ body {
 
 #about {
 
-    .section-header{
-        font-weight: 500;
-        font-size: 30px;
-        margin-top: 50px;
-        margin-bottom: 20px;
-
-        h2 {
-            margin: 0px 0px 0px -20px;
-
-            display: inline-block;
-            padding: 0px 30px 0px 5px;
-            background-image: linear-gradient(to left,
-                                         transparent,
-                                         transparent 50%,
-                                         #00c6ff 50%,
-                                         #00c6ff);
-            background-position: 100% 0;
-            background-size: 260% 100%;
-            @include transition(all, .5s, ease-in);
-        }
-    }
-
     #education {
         h4 {
 
@@ -110,4 +119,9 @@ body {
 
         }
     }
+}
+
+form {
+    width: 50%;
+    max-width: 400px;
 }
