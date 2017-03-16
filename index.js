@@ -14,7 +14,7 @@ app.use("/node_modules", express.static(path.join(__dirname, 'node_modules')));
 
 app.get('/', function (req, res) {
     console.log('Sending to index', __dirname + '/index.html');
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/app/index.html');
 });
 app.get('/*', function(req, res) {
     //maybe get ride of this
