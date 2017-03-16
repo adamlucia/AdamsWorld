@@ -2,7 +2,7 @@
 
 angular.module('mySite')
 .component('footer', {
-    templateUrl: '/app/components/footer/footer.html',
+    templateUrl: '/components/footer/footer.html',
     controller: [function() {
 
 

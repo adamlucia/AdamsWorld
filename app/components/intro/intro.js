@@ -2,7 +2,7 @@
 
 angular.module('mySite')
 .component('intro', {
-    templateUrl: '/app/components/intro/intro.html',
+    templateUrl: '/components/intro/intro.html',
     controller: [function() {
 
     }]

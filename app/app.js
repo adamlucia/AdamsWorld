@@ -4,13 +4,13 @@
 angular.module('mySite', ['ui.bootstrap', 'ui.router', 'ngAnimate'])
 .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function($locationProvider, $stateProvider, $urlRouterProvider) {
     $locationProvider.hashPrefix('!');
-    $urlRouterProvider.when('', '/home');
+    $urlRouterProvider.when('', '/');
 
 
     $stateProvider
     .state('index', {
         abstract:true,
-        templateUrl:'app/templates/main.html',
+        templateUrl:'/templates/main.html',
     })
     .state('index.home', {
         url: '/',
@@ -39,5 +39,8 @@ angular.module('mySite', ['ui.bootstrap', 'ui.router', 'ngAnimate'])
         url: '#contact',
     });
 
-    $urlRouterProvider.otherwise('/home');
-}]);
+    $urlRouterProvider.otherwise('/');
+}])
+.run(function(){
+    console.log('app running');
+});
