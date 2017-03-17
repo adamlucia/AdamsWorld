@@ -6,12 +6,14 @@
             </div>
             <div class="container">
 
-                <form name="contactMe" class="center_horizontal">
+                <form name="contactMe" class="center_horizontal" ng-submit="$ctrl.sendInfo()">
+                    {{contactMe}}
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input name="name" class="form-control" type="text"/>
+                        <span ng-show="contactMe.name.$error">This email format is invalid!</span>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="email">Email:</label>
                         <input name="email" class="form-control" type="email"/>
                     </div>
@@ -22,7 +24,7 @@
                     <div class="form-group">
                         <label for="comment">Comments:</label>
                         <textarea name="comment" rows="4" cols="50" class="form-control"> </textarea>
-                    </div>
+                    </div> -->
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
