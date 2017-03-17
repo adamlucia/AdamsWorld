@@ -7,7 +7,7 @@ angular.module('mySite').directive('slideHighlight', ['$window', function ($wind
 
             element.css('margin', '0px 0px 0px -20px');
             element.css('display', 'inline-block');
-            element.css('background-image', 'linear-gradient(to left, transparent, transparent 50%, #3bc7f9 50%, #3bc7f9)');
+            element.css('background-image', 'linear-gradient(to left, transparent, transparent 50%, #F3F315 50%, #F3F315)');
             element.css('background-position', '100% 0');
             element.css('background-size', '0% 100%');
             element.css('-webkit-transition', 'background-position .5s ease-in');
