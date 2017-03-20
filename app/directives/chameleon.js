@@ -6,7 +6,6 @@ angular.module('mySite').directive('chameleon', ['$window', function ($window) {
             color: "@"
         },
         link: function (scope, element, attrs) {
-            console.log('scope.color', scope.color);
             //create chameleonElement and put if after element that the directive is on
             var chameleonElement = angular.element(`<div id="${ element[0].id }-chameleon"></div>`);
 
@@ -23,7 +22,6 @@ angular.module('mySite').directive('chameleon', ['$window', function ($window) {
             element.css('z-index', 100);
             var elementsTopOffset = element.topOffset;
             angular.element($window).bind("resize", function() {
-                console.log('this.innerHeight', this.innerHeight);
                 chameleonElement.css('height', this.innerHeight+'px');
 
                 element.css('height', this.innerHeight+'px');

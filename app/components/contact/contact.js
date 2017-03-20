@@ -4,14 +4,19 @@ angular.module('mySite')
 .component('contact', {
     templateUrl: '/components/contact/contact.html',
     controller: ['$http', function($http) {
-        this.test = 'blah';
+        this.contactMe = {
+            name: 'Adam',
+            email: 'test@email.com',
+            phone: '7248756148',
+            comments: 'test'
+        };
 
         this.sendInfo = function() {
             console.log('sending info');
             $http({
               method: 'POST',
               url: '/sendEmail',
-              data: JSON.stringify({'name':'name'})
+              data: JSON.stringify(this.contactMe)
             }).then(function successCallback(response) {
                 console.log('sent');
                 // this callback will be called asynchronously

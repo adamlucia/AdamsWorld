@@ -1,31 +1,33 @@
-<section id="contact" class="container">
+<section id="contact" class="container-fluid">
     <div class="row">
         <div class="column">
-            <div class="section-header center">
+            <div class="section_header big_margin center">
                 <h2>Let's Talk</h2>
             </div>
             <div class="container">
-
                 <form name="contactMe" class="center_horizontal" ng-submit="$ctrl.sendInfo()">
-                    {{contactMe}}
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input name="name" class="form-control" type="text"/>
-                        <span ng-show="contactMe.name.$error">This email format is invalid!</span>
+
+                        <input name="name" class="form-control" ng-model="$ctrl.contactMe.name" type="text"/>
+                        <span ng-show="$ctrl.contactMe.name.$error">Please enter your name</span>
                     </div>
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label for="email">Email:</label>
-                        <input name="email" class="form-control" type="email"/>
+                        <input name="email" class="form-control" ng-model="$ctrl.contactMe.email" type="email"/>
+                        <span ng-show="$ctrl.contactMe.email.$error">Please enter a valid email</span>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number:</label>
-                        <input name="phone" class="form-control" type="tel"/>
+                        <input name="phone" class="form-control" ng-model="$ctrl.contactMe.phone" type="tel"/>
+                        <span ng-show="$ctrl.contactMe.phone.$error">Please enter valid phone number</span>
                     </div>
                     <div class="form-group">
                         <label for="comment">Comments:</label>
-                        <textarea name="comment" rows="4" cols="50" class="form-control"> </textarea>
-                    </div> -->
-                    <button type="submit" class="btn btn-default">Submit</button>
+                        <textarea name="comment" rows="4" cols="50" ng-model="$ctrl.contactMe.comments" class="form-control"></textarea>
+                        <span ng-show="$ctrl.contactMe.comments.$error">Please tell me about your project</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                 </form>
             </div>
         </div>

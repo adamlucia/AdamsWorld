@@ -1,4 +1,11 @@
-$main: rgba(58, 165, 199, 1);
+$mainBlue: rgba(13,213,252, 1);
+$yellowHighlight: #F3F315;
+
+// * {
+//   background: #000 !important;
+//   color: #0f0 !important;
+//   outline: solid #f00 1px !important;
+// }
 
 @font-face {
   font-family: 'freedom';
@@ -24,19 +31,30 @@ $main: rgba(58, 165, 199, 1);
 body {
     font-family: sans-serif;
     overflow-x: hidden;
-}
 
-p {
-    font-size: 25px;
-}
-
-ul {
-    li {
+    p {
         font-size: 25px;
     }
+
+    ul {
+        li {
+            font-size: 25px;
+        }
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .center_text {
+        text-align: center;
+    }
+
 }
 
-.container {
+
+
+.container, .container-fluid {
 
     .center_horizontal {
         margin-right: auto;
@@ -53,96 +71,151 @@ ul {
     justify-content: center;
 }
 
-.section-header{
-    font-weight: 500;
-    font-size: 30px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-family: 'freedom';
 
-    h2 {
 
-        padding: 0px 30px 0px 5px;
-        font-style: italic;
 
-        &.shortenWidth {
-            max-width: 50%;
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .section_header{
+        font-weight: 500;
+        font-size: 30px;
+        margin-top: 1em;
+        margin-bottom: 20px;
+        font-family: 'freedom';
+
+        &.big_margin {
+            margin-top: 5em;
         }
-    }
-
-
-    &.center {
-        text-align: center;
 
         h2 {
-            margin: 0px;
-            background-image: none;
+
+            padding: 0px 30px 0px 5px;
+            font-style: italic;
+        }
+
+
+        &.center {
+            text-align: center;
+
+            h2 {
+                margin: 0px;
+                background-image: none;
+            }
         }
     }
-}
 
+    #intro_container {
+        display: block;
+        min-height: 300px;
+        height: 100vh;
+        margin-bottom: 2em;
 
-.navbar {
-    margin-bottom: 0px;
-    background-color: $main;
-    background-image: none;
-    border: none;
-    @include border-radius(0);
-    box-shadow: none;
-}
+        #intro {
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.1) 100%) ,url("../images/mySiteBG.png");
+            background-repeat: no-repeat;
+            background-size: cover;
 
-#intro_container {
-    display: block;
-    min-height: 300px;
-    height: 100vh;
-    margin-bottom: 2em;
+            #name {
+                font-size: 4em;
+            }
 
-    #intro {
-        height: 100%;
-        background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%) ,url("../images/mySiteBG.png");
+            #tagline {
+                font-size: 2em;
+                font-family: 'freedom';
+            }
+        }
+    }
+
+    #about {
+
+        #experience, #education {
+            margin-top: 10em;
+        }
+
+        #education {
+            h4 {
+
+            }
+            .school {
+                font-size: 25px;
+            }
+            .degree {
+                font-size: 20px;
+            }
+        }
+    }
+
+    #contact {
+        background-image: url('../images/constructionPaperRotated.png');
         background-repeat: no-repeat;
+        background-size: 100% 100%;
         background-size: cover;
 
-        #name {
-            font-size: 140;
-            font-weight: 100;
-        }
-
-        #tagline {
-            font-size: 25px;
-            font-family: 'freedom';
-        }
-    }
-}
-
-#about {
-
-    #experience, #education {
         margin-top: 10em;
+
+        form {
+            margin-bottom: 10em;
+            font-size: 1.5em;
+
+            .form-control {
+                font-size: 1.1em;
+                padding: 1.1em;
+
+            }
+            textarea {
+                &.form-control {
+                    padding: .5em 1.1em .5em 1.1em;
+                }
+            }
+        }
     }
 
-    #education {
-        h4 {
+    #footer {
+        height: 4em;
 
-        }
-        .school {
-            font-size: 25px;
-        }
-        .degree {
-            font-size: 20px;
-        }
+        background-image: url('../images/constructionPaperFooter.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-size: cover;
     }
 }
 
-#contact {
-    margin-top: 10em;
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    #intro_container {
+        #intro {
+            #name {
+                font-size: 12em;
+            }
+        }
+    }
 
     form {
         width: 50%;
-        max-width: 400px;
+        min-width: 400px;
+        max-width: 500px;
+    }
+    .section_header{
+        h2 {
+            &.shortenWidth {
+                max-width: 60%;
+            }
+        }
     }
 }
 
-#footer {
-    height: 4em;
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
 }
