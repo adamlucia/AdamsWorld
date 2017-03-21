@@ -5,10 +5,10 @@ angular.module('mySite')
     templateUrl: '/components/contact/contact.html',
     controller: ['$http', function($http) {
         this.contactMe = {
-            name: 'Adam',
-            email: 'test@email.com',
-            phone: '7248756148',
-            comments: 'test'
+            name: '',
+            email: '',
+            phone: '',
+            comments: ''
         };
 
         this.sendInfo = function() {
